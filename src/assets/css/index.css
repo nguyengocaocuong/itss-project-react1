@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(240, 232, 218);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* App*/
+.App{
+  height: 200px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+.App h1 {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 50px;
+
+
+}
+.title {       
+  background-image: linear-gradient(225deg, #ff28ea, #0b9c17);
+  filter: drop-shadow(0 20px 30px #28d8ff33);
+  color: black;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+}

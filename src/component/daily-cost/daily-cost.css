@@ -1,0 +1,37 @@
+.cost {
+    background-color: white;
+    height:inherit;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-content {
+    height: 100%;
+    border-right: 1px dotted gray;
+    width: 50%;
+}
+.form-input label{
+    width: 170px;
+    display: inline-block;
+    color: gray;
+    font-size: 20px;
+}
+
+.form-input input{
+    width: 200px;
+    height: 20px;
+    margin:10px;
+    padding:5px;
+}
+.left-content button{
+    margin-left: 180px;
+    height: 30px;
+    background-color: gray;
+    color: white;
+    padding:5px 15px;
+    border: none;
+}
+.right-content{
+    width: 48%;
+    color:gray;
+}

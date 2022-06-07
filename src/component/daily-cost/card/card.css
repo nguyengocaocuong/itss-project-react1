@@ -1,0 +1,25 @@
+h1{
+    margin-top:-15px;
+}
+.card{
+    width: 60%;
+    padding:15px 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-left: 15%;
+    margin-top:2.5px;
+    margin-bottom:2.5px;
+}
+.card span:first-child{
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    width: 60%;
+    color: gray;
+}
+.card span:last-child{
+color: rgb(57, 107, 122);
+}
+.card p{
+    margin:5px;
+    color: red;
+}

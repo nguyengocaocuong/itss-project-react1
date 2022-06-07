@@ -3,47 +3,47 @@
     {
       "id": 1,
       "image": "https://kimhungmarket.com/uploads/users/users523/dan-linh1.jpg",
-      "name": "Rau xanh",
+      "name": "Rau cải",
       "price": "12.000"
     },
     {
       "id": 2,
       "image": "https://kimhungmarket.com/uploads/users/users523/dan-linh1.jpg",
-      "name": "Rau xanh",
+      "name": "Rau muống",
       "price": "12.000"
     }
   ],
-  "Thịt": [
+  "Thit": [
     {
       "id": 3,
       "image": "https://kimhungmarket.com/uploads/users/users523/dan-linh1.jpg",
-      "name": "Rau xanh",
+      "name": "Thịt bò",
       "price": "12.000"
     },
     {
       "id": 4,
       "image": "https://kimhungmarket.com/uploads/users/users523/dan-linh1.jpg",
-      "name": "Rau xanh",
+      "name": "Thịt gà",
       "price": "12.000"
     }
   ],
-  "Cá": [
+  "Ca": [
     {
       "id": 5,
       "image": "https://kimhungmarket.com/uploads/users/users523/dan-linh1.jpg",
-      "name": "Rau xanh",
+      "name": "Cá lóc",
       "price": "12.000"
     },
     {
       "id": 6,
       "image": "https://kimhungmarket.com/uploads/users/users523/dan-linh1.jpg",
-      "name": "Rau xanh",
+      "name": "Cá thu",
       "price": "12.000"
     },
     {
       "id": 7,
       "image": "https://kimhungmarket.com/uploads/users/users523/dan-linh1.jpg",
-      "name": "Rau xanh",
+      "name": "Cá chim",
       "price": "12.000"
     }
   ]

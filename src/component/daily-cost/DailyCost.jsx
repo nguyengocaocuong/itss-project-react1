@@ -1,31 +1,31 @@
-import React from 'react';
- 
+import React,{useState} from 'react';
+import AddFood from './add-food/AddFood';
+import Card from './card/Card';
+import './daily-cost.css'
 const DailyCost = () => {
+    const [dailyData,setDailyData] = useState([
+        
+    ])
+    const addDailyData = (data)=>{
+        data.date = new Date()
+        console.log(data)
+        setDailyData([...dailyData,data])
+    }
     return (
         <div className='cost'>
             <div className='left-content'>
-                <div className='form-input'>
-                    <label>Ngân sách</label>
-                    <input type="number" value={0} />
-                </div>
-                <div className='form-input'>
-                    <label>Thời gian bắt đầu</label>
-                    <input type="date" />
-                </div>
-                <button>Save</button>
+                <AddFood add={addDailyData} />
             </div>
             <div className='right-content'>
-            <div className='form-input'>
-                    <div className='time'> Từ <span>27/3/2000</span> - <span>28/3/2000</span></div>
-                    <h3>Tổng ngân sách <span>{}</span></h3>
-                    <h3>Đã chi tiêu <span>{}</span></h3>
-                    <h3>Còn lại<span>{}</span></h3>
+                <h1> Lịch sử mua</h1>
+                <div className='card-container'>
+                   {dailyData.map(i => <Card item={i}/>)}
                 </div>
             </div>
 
         </div>
     );
 }
- 
- 
+
+
 export default DailyCost;

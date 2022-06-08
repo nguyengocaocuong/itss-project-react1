@@ -4,7 +4,7 @@ import AddFood from './add-food/AddFood';
 import Card from './card/Card';
 import './daily-cost.css'
 const DailyCost = () => {
-    const [data, putData] = useStorageData('daily-cost')
+    const [data, putData] = useStorageData('dailydata')
     const addDailyData = (data) => {
         data.date = new Date()
         putData(data)
@@ -17,7 +17,9 @@ const DailyCost = () => {
             <div className='right-content'>
                 <h1> Lịch sử mua</h1>
                 <div className='card-container'>
-                    {data.map(i => <Card item={i} />)}
+                    {
+                        data ? data.map((i, index) => <Card item={i} key={index} />) : <></>
+                    }
                 </div>
             </div>
 

@@ -3,11 +3,10 @@ import foods from '../../../assets/JsonData/food.json'
 import './add-food.css'
 const AddFood = ({add}) => {
     const [selectId, setSelectId] = useState(foods.Rau[0].id)
-    const [dailyData,setDailyData] = useState({date:'12/02/2000',listFood:[]})
+    const [dailyData,setDailyData] = useState({date:null,listFood:[]})
     const handleAddFood = (id)=>{
         let tmp = [...foods.Ca,...foods.Rau,...foods.Thit].filter(i => i.id == id)
         setDailyData({...dailyData,['listFood']:[...dailyData.listFood,tmp[0]]})
-        // putCurrentListFood([...currentListFood,foods.Rau[0]])
     }
     return (
         <div>
@@ -31,7 +30,7 @@ const AddFood = ({add}) => {
                     ))
                 }
             </div>
-            <button className='save' onClick={()=>add(dailyData)}>Save</button>
+            <button className='save' onClick={()=>{add(dailyData);setDailyData({date:null,listFood:[]})}}>Save</button>
         </div>
     );
 }

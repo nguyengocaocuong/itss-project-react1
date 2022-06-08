@@ -42,3 +42,7 @@ code {
   -webkit-background-clip: text;
   -webkit-box-decoration-break: clone;
 }
+.max-height{
+  height: 400px;
+  overflow: auto;
+}

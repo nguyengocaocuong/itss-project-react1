@@ -2,50 +2,44 @@
       export const Rau = [
         {
           "id": 1,
-          "image": "https://kimhungmarket.com/uploads/users/users523/dan-linh1.jpg",
-          "name": "Rau xanh1",
-          "price": "12.000"
+          "image": "https://www.fao.org.vn/wp-content/uploads/2020/11/cach-trong-bap-cai.jpg",
+          "name": "キャベツ",
+          "price": "5000"
         },
         {
           "id": 2,
-          "image": "https://kimhungmarket.com/uploads/users/users523/dan-linh1.jpg",
-          "name": "Rau xanh",
-          "price": "12.000"
+          "image": "https://vinmec-prod.s3.amazonaws.com/images/20190620_071443_522146_rau-muong.max-1800x1800.png",
+          "name": "水ほうれん草",
+          "price": "12000"
         }
       ]
       export const thit =
       [
         {
           "id": 3,
-          "image": "https://kimhungmarket.com/uploads/users/users523/dan-linh1.jpg",
-          "name": "thit1",
-          "price": "12.000"
+          "image": "https://suckhoehangngay.mediacdn.vn/thumb_w/600/154880486097817600/2021/6/14/bovai-800x500-1623664300012629349733-0-0-500-800-crop-16236643058491858824249.jpg",
+          "name": "牛肉",
+          "price": "30000"
         },
         {
           "id": 4,
-          "image": "https://kimhungmarket.com/uploads/users/users523/dan-linh1.jpg",
-          "name": "thit2",
-          "price": "12.000"
+          "image": "https://tse2.mm.bing.net/th?id=OIP.J_VGF-LMmm0ZVkfgosv0QQHaEI&pid=Api&P=0&w=354&h=198",
+          "name": "豚肉",
+          "price": "42000"
         }
       ]
     export const ca =[
-        {
-          "id": 5,
-          "image": "https://kimhungmarket.com/uploads/users/users523/dan-linh1.jpg",
-          "name": "ca1",
-          "price": "12.000"
-        },
-        {
-          "id": 6,
-          "image": "https://kimhungmarket.com/uploads/users/users523/dan-linh1.jpg",
-          "name": "ca2",
-          "price": "12.000"
-        },
-        {
-          "id": 7,
-          "image": "https://kimhungmarket.com/uploads/users/users523/dan-linh1.jpg",
-          "name": "ca3",
-          "price": "12.000"
-        }
-      ]
+      {
+        "id": 5,
+        "image": "http://chocayenso.com/wp-content/uploads/2019/10/c%C3%A1-ng%E1%BB%AB-%C4%91%E1%BA%A1i-d%C6%B0%C6%A1ng-6.jpg",
+        "name": "ツナ",
+        "price": "120000"
+      },
+      {
+        "id": 6,
+        "image": "https://thucphamtantai.com/wp-content/uploads/2019/10/ca-thu.png",
+        "name": "サバ",
+        "price": "210000"
+      }
+    ]
     

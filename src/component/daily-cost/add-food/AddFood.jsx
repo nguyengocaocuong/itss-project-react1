@@ -10,7 +10,7 @@ const AddFood = ({add}) => {
     }
     return (
         <div>
-            <div className='form-input'>
+            <div className='form'>
                 <select className="" value={selectId} onChange={(e)=>setSelectId(e.target.value)}>
                     {foods.Rau.map(i => <option key={i.id} value={i.id}>{i.name}</option>)}
                     {foods.Thit.map(i => <option key={i.id} value={i.id}>{i.name}</option>)}

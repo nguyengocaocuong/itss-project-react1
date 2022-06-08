@@ -4,9 +4,9 @@ import './main-content.css'
 
 const getContent = (id) => {
     switch (id) {
-        case 0:
-            return <DailyCost />
         case 1:
+            return <DailyCost />
+        case 2:
             return <ListFood />
     }
 }

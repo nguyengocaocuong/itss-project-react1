@@ -5,7 +5,8 @@ const AddFood = ({add}) => {
     const [selectId, setSelectId] = useState(foods.Rau[0].id)
     const [dailyData,setDailyData] = useState({date:'12/02/2000',listFood:[]})
     const handleAddFood = (id)=>{
-        setDailyData({...dailyData,['listFood']:[...dailyData.listFood,foods.Ca[0]]})
+        let tmp = [...foods.Ca,...foods.Rau,...foods.Thit].filter(i => i.id == id)
+        setDailyData({...dailyData,['listFood']:[...dailyData.listFood,tmp[0]]})
         // putCurrentListFood([...currentListFood,foods.Rau[0]])
     }
     return (

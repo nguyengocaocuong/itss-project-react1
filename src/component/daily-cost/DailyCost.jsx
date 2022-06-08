@@ -1,15 +1,13 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
+import useStorageData from '../../hook/StorageData';
 import AddFood from './add-food/AddFood';
 import Card from './card/Card';
 import './daily-cost.css'
 const DailyCost = () => {
-    const [dailyData,setDailyData] = useState([
-        
-    ])
-    const addDailyData = (data)=>{
+    const [data, putData] = useStorageData('daily-cost')
+    const addDailyData = (data) => {
         data.date = new Date()
-        console.log(data)
-        setDailyData([...dailyData,data])
+        putData(data)
     }
     return (
         <div className='cost'>
@@ -19,7 +17,7 @@ const DailyCost = () => {
             <div className='right-content'>
                 <h1> Lịch sử mua</h1>
                 <div className='card-container'>
-                   {dailyData.map(i => <Card item={i}/>)}
+                    {data.map(i => <Card item={i} />)}
                 </div>
             </div>
 

@@ -1,24 +1,24 @@
-import { useState } from 'react'
 import './menu.css'
 const menuItems = [
-    { id: 0, icon: "fa fa-money", title: "Thiết lập ngân sách" },
-    { id: 1, icon: "fa fa-cutlery", title: "Danh sách nguyên liệu" },
-    { id: 2, icon: "fa fa-shopping-basket", title: "Chi tiêu trong ngày" }
+    { id: 1, icon: "fa fa-shopping-basket", title: "一日で費用" },
+    { id: 2, icon: "fa fa-cutlery", title: "料理リスト" }
+   
 ]
-function Menu() {
-    const [index, setIndex] = useState(0)
+function Menu({ changeId, id }) {
     return (
         <div className="menu">
-            {
-                menuItems.map(item =>
-                (
-                    <div className={`menu-item ${index == item.id ? 'selected' : ''}`} onClick={()=> setIndex(item.id)}>
-                        <i class={item.icon} aria-hidden="true"></i>
-                        <span>{item.title}</span>
-                    </div>
-                )
-                )
-            }
+            <div className='menu-content'>
+                {
+                    menuItems.map(item =>
+                    (
+                        <div className={`menu-item ${id == item.id ? 'selected' : ''}`} onClick={() => changeId(item.id)}>
+                            <i class={item.icon} aria-hidden="true"></i>
+                            <span>{item.title}</span>
+                        </div>
+                    )
+                    )
+                }
+            </div>
         </div>
     )
 }

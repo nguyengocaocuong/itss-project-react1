@@ -1,11 +1,12 @@
 .menu{
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     margin-bottom:20px;
+    width: 100%;
 }
 .menu-item{
     padding:15px 20px;
-    width: 18%;
+    width: 44%;
     background-color: rgb(217, 208, 195);
     align-items: center;
     text-align: center;
@@ -21,4 +22,9 @@
 .menu-item.selected{
     border-bottom: 3px solid red;
     color:rgb(235, 62, 62);
+}
+.menu-content{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
 }

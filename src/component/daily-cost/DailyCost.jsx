@@ -1,31 +1,33 @@
-import React from 'react';
- 
+import React, { useState } from 'react';
+import useStorageData from '../../hook/StorageData';
+import AddFood from './add-food/AddFood';
+import Card from './card/Card';
+import './daily-cost.css'
+import { format } from 'date-fns'
+
 const DailyCost = () => {
+    const [data, putData] = useStorageData('dailydata')
+    console.log(data)
+    const addDailyData = (data) => {
+        data.date = format(new Date(),'MM/dd/yyyy').toString()
+        putData(data)
+    }
     return (
         <div className='cost'>
             <div className='left-content'>
-                <div className='form-input'>
-                    <label>Ngân sách</label>
-                    <input type="number" value={0} />
-                </div>
-                <div className='form-input'>
-                    <label>Thời gian bắt đầu</label>
-                    <input type="date" />
-                </div>
-                <button>Save</button>
+                <AddFood add={addDailyData} />
             </div>
             <div className='right-content'>
-            <div className='form-input'>
-                    <div className='time'> Từ <span>27/3/2000</span> - <span>28/3/2000</span></div>
-                    <h3>Tổng ngân sách <span>{}</span></h3>
-                    <h3>Đã chi tiêu <span>{}</span></h3>
-                    <h3>Còn lại<span>{}</span></h3>
+                <h1>購入履歴</h1>
+                <div className='card-container'>
+                    {
+                        data.length > 0 ? data.map((i, index) => <Card item={i} key={index} />) : <></>
+                    }
                 </div>
             </div>
 
         </div>
     );
 }
- 
- 
+
 export default DailyCost;

@@ -16,10 +16,10 @@ const AddFood = ({add}) => {
                     {foods.Thit.map(i => <option key={i.id} value={i.id}>{i.name}</option>)}
                     {foods.Ca.map(i => <option key={i.id} value={i.id}>{i.name}</option>)}
                 </select>
-                <button onClick={()=>handleAddFood(selectId)}><i class="fa fa-plus" aria-hidden="true"></i>Thêm nguyên liệu</button>
+                <button onClick={()=>handleAddFood(selectId)}><i class="fa fa-plus" aria-hidden="true"></i>料理を追加</button>
             </div>
             <div className='list-food'>
-                <h2>Danh sách nguyên liệu</h2>
+                <h2>選んだ料理</h2>
                 {
                     dailyData.listFood.map((i,index) => (
                         <p className='food-item' key={index}>
@@ -30,7 +30,7 @@ const AddFood = ({add}) => {
                     ))
                 }
             </div>
-            <button className='save' onClick={()=>{add(dailyData);setDailyData({date:null,listFood:[]})}}>Save</button>
+            <button className='save' onClick={()=>{add(dailyData);setDailyData({date:null,listFood:[]})}}>保存</button>
         </div>
     );
 }

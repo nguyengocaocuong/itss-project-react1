@@ -6,7 +6,7 @@ function App() {
   const [id,setId] = useState(1)
   return (
     <div className="App">
-      <h1 className="title">QUẢN LÝ CHI TIÊU NHÀ TRỌ</h1>
+      <h1 className="title">旅館での支出の統計</h1>
       <Menu changeId={setId} id={id}/>
       <MainContent id={id}/>
     </div>

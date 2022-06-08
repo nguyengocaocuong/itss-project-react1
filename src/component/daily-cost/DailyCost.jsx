@@ -18,7 +18,7 @@ const DailyCost = () => {
                 <AddFood add={addDailyData} />
             </div>
             <div className='right-content'>
-                <h1> Lịch sử mua</h1>
+                <h1>購入履歴</h1>
                 <div className='card-container'>
                     {
                         data.length > 0 ? data.map((i, index) => <Card item={i} key={index} />) : <></>

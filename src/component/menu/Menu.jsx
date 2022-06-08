@@ -1,7 +1,8 @@
 import './menu.css'
 const menuItems = [
-    { id: 1, icon: "fa fa-cutlery", title: "Danh sách nguyên liệu" },
-    { id: 2, icon: "fa fa-shopping-basket", title: "Chi tiêu trong ngày" }
+    { id: 1, icon: "fa fa-shopping-basket", title: "一日で費用" },
+    { id: 2, icon: "fa fa-cutlery", title: "料理リスト" }
+   
 ]
 function Menu({ changeId, id }) {
     return (

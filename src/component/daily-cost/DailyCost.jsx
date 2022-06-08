@@ -30,5 +30,4 @@ const DailyCost = () => {
     );
 }
 
-
 export default DailyCost;

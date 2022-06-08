@@ -1,11 +1,11 @@
-import Cost from "../cost/Cost";
+
 import ListFood from "../list-food/ListFood";
 import './main-content.css'
 
 const getContent = (id) => {
     switch (id) {
         case 0:
-            return <Cost />
+            // return <Cost />
         case 1:
             return <ListFood />
     }

@@ -1,3 +1,4 @@
+import FoodItem from "./component/list-food/food-item/FoodItem";
 import MainContent from "./component/main-content/MainContent";
 import Menu from "./component/menu/Menu";
 

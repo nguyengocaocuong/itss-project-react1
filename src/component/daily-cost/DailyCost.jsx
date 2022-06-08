@@ -3,10 +3,13 @@ import useStorageData from '../../hook/StorageData';
 import AddFood from './add-food/AddFood';
 import Card from './card/Card';
 import './daily-cost.css'
+import { format } from 'date-fns'
+
 const DailyCost = () => {
     const [data, putData] = useStorageData('dailydata')
+    console.log(data)
     const addDailyData = (data) => {
-        data.date = new Date()
+        data.date = format(new Date(),'MM/dd/yyyy').toString()
         putData(data)
     }
     return (
@@ -18,7 +21,7 @@ const DailyCost = () => {
                 <h1> Lịch sử mua</h1>
                 <div className='card-container'>
                     {
-                        data ? data.map((i, index) => <Card item={i} key={index} />) : <></>
+                        data.length > 0 ? data.map((i, index) => <Card item={i} key={index} />) : <></>
                     }
                 </div>
             </div>

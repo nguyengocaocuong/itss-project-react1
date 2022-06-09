@@ -3,20 +3,15 @@ import { useState } from "react";
 import PrintItem from "./food-item/FoodItem";
 import "antd/dist/antd.css";
 import { Card } from "antd";
-import { ca, thit, Rau } from "../../assets/JsonData/data"
+import { ca, thit, Rau } from "../../assets/JsonData/data";
 
 import food from "../../assets/JsonData/food.json";
 const { Meta } = Card;
-
-
-
-
 
 const ListFood = () => {
   const [hien, setHien] = useState(true);
   const [hieu, setListFood] = useState(food);
   const tabListNoTitle = [
-
     {
       key: "all",
       tab: "全て",
@@ -32,14 +27,11 @@ const ListFood = () => {
     {
       key: "ca",
       tab: "魚",
-    }
-
-
+    },
   ];
   const contentListNoTitle = {
     all: (
       <div className="container-fluid">
-
         {hien == true ? (
           <div className="row">
             <PrintItem x={ca} />,
@@ -50,35 +42,22 @@ const ListFood = () => {
           <div className="row">
             <Test />
           </div>
-        )
-        }
-
+        )}
       </div>
-
     ),
     rau: (
       <div className="d-flex justify-content-space">
-        {
-          <PrintItem x={Rau} />
-        }
+        {<PrintItem x={Rau} />}
       </div>
     ),
     thit: (
       <div className="d-flex justify-content-space">
-        {
-          <PrintItem x={thit} />
-        }
+        {<PrintItem x={thit} />}
       </div>
     ),
     ca: (
-      <div className="d-flex justify-content-space">
-        {
-          <PrintItem x={ca} />
-
-        }
-      </div>
-    )
-
+      <div className="d-flex justify-content-space">{<PrintItem x={ca} />}</div>
+    ),
   };
 
   const [activeTabKey2, setActiveTabKey2] = useState("all");
@@ -87,70 +66,54 @@ const ListFood = () => {
   };
 
   function Test(props) {
-
-    Rau.map(item => {
-
-      return (
-        item.name.includes(props.xx) ? (
-          <Card key={item.id}
-            className="col-3"
-            hoverable
-            style={{
-              width: 240,
-              margin: 10,
-            }}
-
-            cover={
-              <img
-                alt="example"
-                src={item.image}
-              />
-            }
-          >
-            <Meta title={item.name} description={item.price} />
-          </Card>
-        ) : "ko co san pham"
-      )
-    })
-
-
+    Rau.map((item) => {
+      return item.name.includes(props.xx) ? (
+        <Card
+          key={item.id}
+          className="col-3"
+          hoverable
+          style={{
+            width: 240,
+            margin: 10,
+          }}
+          cover={<img alt="example" src={item.image} />}
+        >
+          <Meta title={item.name} description={item.price} />
+        </Card>
+      ) : (
+        "ko co san pham"
+      );
+    });
   }
   const handle = (event) => {
-
     if (event.key === "Enter") {
-
-
-      <Test xx={event.target.value} />
-      console.log("vao day")
+      <Test xx={event.target.value} />;
+      console.log("vao day");
+    } else {
     }
-    else {
-
-    }
-  }
-
+  };
 
   return (
-    <div className="d-flex" >
+    <div className="d-flex">
       <Card
         style={{
           width: "100%",
+          borderRadius: 16,
+          boxShadow:
+            "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px",
         }}
         tabList={tabListNoTitle}
         activeTabKey={activeTabKey2}
-        tabBarExtraContent={<input onKeyPress={handle} />}
+        // tabBarExtraContent={<input onKeyPress={handle} />}
         onTabChange={(key) => {
           onTab2Change(key);
         }}
       >
-        <div className="max-height">
-          {contentListNoTitle[activeTabKey2]}
-        </div>
+        <div className="max-height">{contentListNoTitle[activeTabKey2]}</div>
       </Card>
-      <div>
-
-      </div>
+      <div></div>
     </div>
   );
-}
+};
 
 export default ListFood;

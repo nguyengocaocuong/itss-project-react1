@@ -1,82 +1,109 @@
+.add-food {
+  margin-left: 12%;
+  margin-right: 20px;
+}
+
+.add-food h5 {
+  color: gray;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+.list-food {
+  max-height: 228px;
+  overflow: auto;
+}
+
 select {
+  /* styling */
+  background-color: white;
+  border: thin solid rgb(0, 166, 255);
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
 
-    /* styling */
-    background-color: white;
-    border: thin solid blue;
-    border-radius: 4px;
-    display: inline-block;
-    font: inherit;
-    line-height: 1.5em;
-    padding: 0.5em 3.5em 0.5em 1em;
+  /* reset */
 
-    /* reset */
-
-    margin: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 50%;
-    margin-right: 10px;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 50%;
+  margin-right: 10px;
 }
 
-.left-content  button {
-    line-height: 1.5em;
-    padding: 0.6em 1em 0.6em 1em;
-    font: inherit;
-    background-color: gray;
-    color: white;
-    border: none;
-    background-color: rgb(0, 166, 255);
-    width: 150px;
-    cursor: pointer;
+.left-content button {
+  line-height: 1.5em;
+  padding: 0.6em 1em 0.6em 1em;
+  font: inherit;
+  background-color: gray;
+  color: white;
+  border: none;
+  background-color: rgb(0, 166, 255);
+  width: 150px;
+  cursor: pointer;
 }
-.left-content .form select{
-    margin-right: 20px!important;
+.left-content .form select {
+  margin-right: 20px !important;
 }
 .left-content button:hover {
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .left-content button i {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .food-item {
-    padding: 5px 15px;
-    border-bottom: 0.1px solid rgb(233, 222, 222);
-    width: 60%;
-    font-weight: 900;
-    color: rgb(50, 192, 66);
+  padding: 5px 15px;
+  border-bottom: 0.1px solid rgb(233, 222, 222);
+  width: 80%;
+  font-weight: 900;
+  color: rgb(50, 192, 66);
 }
 
 .food-item:hover {
-    background-color: rgb(162, 215, 220);
+  background-color: rgb(199, 236, 240);
 }
 
 .food-item .id {
-    width: 30px;
-    display: inline-block;
-
+  width: 30px;
+  display: inline-block;
 }
 
 .food-item .content {
-    width: 200px;
-    display: inline-block;
+  width: 200px;
+  display: inline-block;
 }
 
 .food-item .unit {
-    font-size: 12px;
-    color: red;
-    margin-left: 5px;
+  font-size: 12px;
+  color: red;
+  margin-left: 5px;
 }
 
 button.save {
-    margin-left: 300px;
-    width: 100px !important;
-    border-radius: 25px;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    background-color: red;
+  /* margin-left: 300px; */
+  width: 100px !important;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: rgb(252, 45, 45);
+}
+
+button.delete {
+  margin-left: 20px;
+  width: 100px !important;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: rgb(77, 74, 74);
+}
+
+.rounded-border {
+  border-radius: 12px;
 }

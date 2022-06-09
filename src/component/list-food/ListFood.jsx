@@ -104,14 +104,12 @@ const ListFood = () => {
         }}
         tabList={tabListNoTitle}
         activeTabKey={activeTabKey2}
-        // tabBarExtraContent={<input onKeyPress={handle} />}
         onTabChange={(key) => {
           onTab2Change(key);
         }}
       >
         <div className="max-height">{contentListNoTitle[activeTabKey2]}</div>
       </Card>
-      <div></div>
     </div>
   );
 };
